@@ -1,0 +1,10 @@
+.pagination ul {
+    text-align: center;
+
+}
+
+.pagination li {
+    width: 5%;
+    border: #2a88bd 1px solid;
+    text-align: center;
+}
