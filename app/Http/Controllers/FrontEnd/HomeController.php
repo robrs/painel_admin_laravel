@@ -12,8 +12,9 @@ class HomeController extends Controller
 {
     public function index()
     {
-      $produtos = Produto::where('publicado','s')->paginate(6);
-      return view('frontend.home',compact('produtos'));
+      //$produtos = Produto::where('publicado','s')->paginate(6);
+
+        return redirect()->route('auth.login');
     }
 }
 

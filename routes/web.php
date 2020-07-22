@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', ['as' => 'frontend.home', 'uses' => 'Frontend\HomeController@index']);
+//Route::get('/', ['as' => 'frontend.home', 'uses' => 'Frontend\HomeController@index']);
 
 Route::get('/login', ['as' => 'auth.login', 'uses' => 'Auth\LoginController@index']);
 Route::get('/login/sair', ['as' => 'auth.logout', 'uses' => 'Auth\LoginController@sair']);
@@ -23,7 +23,7 @@ Route::post('/login/entrar', ['as' => 'site.login.entrar', 'uses' => 'Auth\Login
 
 Route::group(['middleware' => 'auth'], function () {
 
-    Route::get('/dashboard', ['as' => 'dashboard', 'uses' => 'Backend\DashBoardController@index']);
+    Route::get('/', ['as' => 'dashboard', 'uses' => 'Backend\DashBoardController@index']);
 
     // Produto
     Route::get('/produto/admin', ['as' => 'produtos', 'uses' => 'Backend\ProdutoController@admin']);
